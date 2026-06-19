@@ -1823,63 +1823,163 @@ ul { list-style: none; }
 .loading-screen {
   position: fixed;
   inset: 0;
-  background: var(--clr-bg-primary);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.loader-panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--clr-bg-primary);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+
+.loader-panel-left {
+  left: 0;
+  border-right: 1px solid rgba(200, 169, 126, 0.08);
+}
+
+.loader-panel-right {
+  right: 0;
+  border-left: 1px solid rgba(200, 169, 126, 0.08);
+}
+
+.loader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 20px;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  gap: 24px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.loading-screen.hidden {
+/* Loader Icon */
+.loader-icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-icon {
+  font-size: 3rem;
+  animation: cupBounce 1.5s ease infinite;
+  display: inline-block;
+  z-index: 2;
+}
+
+.loader-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--clr-accent);
+  animation: pulseGlow 1.5s ease-out infinite;
   opacity: 0;
-  visibility: hidden;
+  z-index: 1;
 }
 
+/* Staggered text */
 .loading-logo {
   font-family: var(--font-display);
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  color: var(--clr-accent);
-  animation: loadPulse 1.5s ease-in-out infinite;
+  color: var(--clr-text-primary);
+  display: flex;
+  gap: 4px;
 }
 
+.loading-logo span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: calc(var(--idx) * 0.08s);
+}
+
+.loading-logo span.space {
+  width: 12px;
+}
+
+.loading-logo span:nth-child(n+5) {
+  color: var(--clr-accent);
+}
+
+/* Loading Bar */
 .loading-bar {
-  width: 120px;
+  width: 160px;
   height: 3px;
   background: var(--clr-bg-card);
   border-radius: 3px;
   overflow: hidden;
+  position: relative;
 }
 
 .loading-bar::after {
   content: '';
   display: block;
-  width: 50%;
+  width: 60%;
   height: 100%;
-  background: var(--clr-accent);
+  background: linear-gradient(90deg, transparent, var(--clr-accent), transparent);
   border-radius: 3px;
-  animation: loadBar 1.2s ease-in-out infinite;
+  animation: loadBar 1.5s infinite ease-in-out;
 }
 
-@keyframes loadPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+/* Hidden States */
+.loading-screen.hidden .loader-panel-left {
+  transform: translateX(-100%);
+}
+
+.loading-screen.hidden .loader-panel-right {
+  transform: translateX(100%);
+}
+
+.loading-screen.hidden .loader-content {
+  opacity: 0;
+  transform: scale(0.9) translateY(-10px);
+  pointer-events: none;
+}
+
+/* Keyframes */
+@keyframes cupBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(8deg); }
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.6); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes letterEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes loadBar {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(300%); }
+  0% { left: -100%; }
+  100% { left: 100%; }
 }
 
 /* ===== PARALLAX BG DECORATION ===== */
 .bg-decoration {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(200,169,126,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(200, 169, 126, 0.08) 0%, transparent 70%);
   pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .bg-decoration-1 {
@@ -1887,6 +1987,7 @@ ul { list-style: none; }
   height: 600px;
   top: -200px;
   right: -200px;
+  animation: floatBlob 20s infinite alternate ease-in-out;
 }
 
 .bg-decoration-2 {
@@ -1894,4 +1995,11 @@ ul { list-style: none; }
   height: 400px;
   bottom: -100px;
   left: -100px;
+  animation: floatBlob 25s infinite alternate-reverse ease-in-out 2s;
+}
+
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
 }
