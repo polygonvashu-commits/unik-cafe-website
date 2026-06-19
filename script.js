@@ -241,29 +241,57 @@ document.addEventListener('DOMContentLoaded', () => {
   renderMenu('all');
 
   // ===== WHATSAPP WIDGET =====
+  const waWidget = document.getElementById('whatsappWidget');
   const waBtn = document.querySelector('.whatsapp-btn');
   const waPopup = document.querySelector('.whatsapp-popup');
   const waClose = document.querySelector('.whatsapp-popup-close');
   const waBadge = document.querySelector('.whatsapp-badge');
+  const waSend = document.querySelector('.whatsapp-send-btn');
   let waOpen = false;
+  let hasInteracted = false;
 
-  // Auto-show popup after 5 seconds
+  // Auto-show popup after 5 seconds only if user hasn't interacted
   setTimeout(() => {
-    if (!waOpen) {
+    if (!hasInteracted && !waOpen) {
       waPopup.classList.add('active');
       waOpen = true;
     }
   }, 5000);
 
-  waBtn.addEventListener('click', () => {
+  waBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hasInteracted = true;
     waOpen = !waOpen;
     waPopup.classList.toggle('active', waOpen);
     if (waBadge) waBadge.style.display = 'none';
   });
 
-  waClose.addEventListener('click', () => {
+  waClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hasInteracted = true;
     waOpen = false;
     waPopup.classList.remove('active');
+  });
+
+  if (waSend) {
+    waSend.addEventListener('click', () => {
+      hasInteracted = true;
+      waOpen = false;
+      waPopup.classList.remove('active');
+    });
+  }
+
+  // Close popup if clicking outside the widget
+  document.addEventListener('click', (e) => {
+    if (waOpen && waWidget && !waWidget.contains(e.target)) {
+      waOpen = false;
+      waPopup.classList.remove('active');
+    }
+  });
+
+  // Stop click bubbling from inside the popup to the document
+  waPopup.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
 
   // ===== SMOOTH SCROLL =====
