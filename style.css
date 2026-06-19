@@ -1936,6 +1936,10 @@ ul { list-style: none; }
 }
 
 /* Hidden States */
+.loading-screen.hidden {
+  pointer-events: none;
+}
+
 .loading-screen.hidden .loader-panel-left {
   transform: translateX(-100%);
 }
