@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Unik Cafe Dulehra — Premium coffee shop & restaurant in Dulhera, Haryana. Enjoy delicious food, coffee, and cozy ambiance. ₹200–400 range.">
+  <meta name="keywords" content="Unik Cafe, Dulehra, coffee shop, restaurant, Haryana, SK Associates, best cafe Dulhera">
+  <meta name="author" content="Unik Cafe Dulehra">
+  <meta property="og:title" content="Unik Cafe Dulehra — Where Every Sip Tells a Story">
+  <meta property="og:description" content="Premium coffee shop & restaurant in Dulhera, Haryana. Rated 5.0 on Google.">
+  <meta property="og:type" content="website">
+  <title>Unik Cafe Dulehra — Premium Coffee & Dining Experience</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">Unik Cafe</div>
+    <div class="loading-bar"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="navbar-brand">
+        <div class="brand-icon">U</div>
+        <div class="brand-text">Unik <span>Cafe</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Reserve Now</a>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="Unik Cafe Ambiance">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Rated 5.0 on Google
+      </div>
+      <h1 class="hero-title">
+        <span class="line">Where Every</span>
+        <span class="line"><span class="accent">Sip</span> Tells a</span>
+        <span class="line">Story</span>
+      </h1>
+      <p class="hero-description">
+        Welcome to Unik Cafe Dulehra — your neighbourhood destination for exceptional coffee, mouthwatering cuisine, and moments worth savouring. 
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          Explore Menu
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Find Us
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h3><span data-count="5" data-suffix=".0" data-prefix="">5</span>.0</h3>
+          <p>Google Rating</p>
+        </div>
+        <div class="hero-stat">
+          <h3 data-count="50" data-suffix="+" data-prefix="">0</h3>
+          <p>Menu Items</p>
+        </div>
+        <div class="hero-stat">
+          <h3 data-count="1000" data-suffix="+" data-prefix="">0</h3>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- Specialties Marquee -->
+  <div class="specialties">
+    <div class="marquee">
+      <div class="marquee-content">
+        <span class="marquee-item"><span class="marquee-dot"></span> Premium Coffee</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Fresh Snacks</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> North Indian Cuisine</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Cold Beverages</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Desserts</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Fast Food</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Masala Chai</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Family Dining</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span class="marquee-item"><span class="marquee-dot"></span> Premium Coffee</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Fresh Snacks</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> North Indian Cuisine</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Cold Beverages</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Desserts</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Fast Food</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Masala Chai</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Family Dining</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal-left">
+          <div class="about-image">
+            <img src="images/food-spread.png" alt="Unik Cafe Food Selection">
+          </div>
+          <div class="about-image-decoration"></div>
+        </div>
+        <div class="about-content reveal-right">
+          <span class="section-label">Our Story</span>
+          <h2>A Passion for <span class="text-accent">Flavour</span> & Warmth</h2>
+          <p>
+            Nestled on the Jhajjar–Bahadurgarh Road in Dulhera, Unik Cafe was born from a simple dream: to create a space where quality food meets genuine hospitality. Every dish on our menu is crafted with fresh ingredients and authentic spices.
+          </p>
+          <p>
+            Whether you're craving a rich cappuccino to start your morning, a hearty meal with family, or a sweet indulgence to end your day — Unik Cafe has something special waiting for you.
+          </p>
+          <div class="about-features stagger-children">
+            <div class="about-feature reveal">
+              <div class="about-feature-icon">☕</div>
+              <span>Premium Coffee</span>
+            </div>
+            <div class="about-feature reveal">
+              <div class="about-feature-icon">🍽️</div>
+              <span>Fresh Cuisine</span>
+            </div>
+            <div class="about-feature reveal">
+              <div class="about-feature-icon">💰</div>
+              <span>₹200–400 Range</span>
+            </div>
+            <div class="about-feature reveal">
+              <div class="about-feature-icon">⭐</div>
+              <span>5-Star Rated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu section-padding" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Menu</span>
+        <h2 class="section-title">Crafted with <span class="text-accent">Love</span></h2>
+        <p class="section-subtitle">From aromatic coffees to hearty meals, every item is prepared fresh with the finest ingredients.</p>
+      </div>
+
+      <div class="menu-categories reveal">
+        <button class="menu-cat-btn active" data-category="all">All Items</button>
+        <button class="menu-cat-btn" data-category="coffee">Coffee</button>
+        <button class="menu-cat-btn" data-category="beverages">Beverages</button>
+        <button class="menu-cat-btn" data-category="snacks">Snacks</button>
+        <button class="menu-cat-btn" data-category="main">Main Course</button>
+        <button class="menu-cat-btn" data-category="desserts">Desserts</button>
+      </div>
+
+      <div class="menu-carousel-wrapper">
+        <div class="menu-carousel" id="menuCarousel">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+
+      <div class="carousel-nav reveal">
+        <button class="carousel-arrow carousel-prev" aria-label="Previous items">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-arrow carousel-next" aria-label="Next items">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-padding" id="reviews">
+    <div class="testimonials-bg-pattern"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our <span class="text-accent">Guests</span> Say</h2>
+        <p class="section-subtitle">Real reviews from real people. We're proud to serve Dulhera's finest dining experience.</p>
+      </div>
+
+      <div class="testimonials-grid stagger-children">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Very nice service and delicious food. The ambiance is perfect for both a quick coffee and a full family meal. Highly recommend the cold coffee shake!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CS</div>
+            <div class="testimonial-info">
+              <h4>Chirag Sharma</h4>
+              <div class="stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">One of the best restaurants in the area! The paneer butter masala is absolutely divine and the prices are very reasonable. A must-visit place in Dulhera.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SK</div>
+            <div class="testimonial-info">
+              <h4>Sunil Kumar</h4>
+              <div class="stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Great place to hang out with friends. The gourmet burger is absolutely loaded and the masala chai is the best I've had. Clean, modern, and welcoming!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RV</div>
+            <div class="testimonial-info">
+              <h4>Ravi Verma</h4>
+              <div class="stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section-padding" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Gallery</span>
+        <h2 class="section-title">A Glimpse <span class="text-accent">Inside</span></h2>
+        <p class="section-subtitle">Peek into the flavours and vibes at Unik Cafe.</p>
+      </div>
+
+      <div class="gallery-grid stagger-children">
+        <div class="gallery-item reveal-scale">
+          <img src="images/hero.png" alt="Cafe Interior" loading="lazy">
+          <div class="gallery-item-overlay"><span>Our Ambiance</span></div>
+        </div>
+        <div class="gallery-item reveal-scale">
+          <img src="images/coffee.png" alt="Cappuccino" loading="lazy">
+          <div class="gallery-item-overlay"><span>Artisan Coffee</span></div>
+        </div>
+        <div class="gallery-item reveal-scale">
+          <img src="images/burger.png" alt="Gourmet Burger" loading="lazy">
+          <div class="gallery-item-overlay"><span>Gourmet Burgers</span></div>
+        </div>
+        <div class="gallery-item reveal-scale">
+          <img src="images/paneer.png" alt="Paneer Dish" loading="lazy">
+          <div class="gallery-item-overlay"><span>Indian Delights</span></div>
+        </div>
+        <div class="gallery-item reveal-scale">
+          <img src="images/brownie.png" alt="Brownie Dessert" loading="lazy">
+          <div class="gallery-item-overlay"><span>Sweet Endings</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <span class="section-label">Get in Touch</span>
+          <h2>Visit <span class="text-accent">Unik Cafe</span></h2>
+          <p>We'd love to see you! Drop by for a coffee, a meal, or just to say hello. Located on the Jhajjar–Bahadurgarh Road in Dulhera.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <h4>Location</h4>
+                <p>JQWP+2V9, Jhajjar - Bahadurgarh Rd,<br>Dulhera, Haryana 124508</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">🕐</div>
+              <div class="contact-item-text">
+                <h4>Hours</h4>
+                <p>Open Daily<br>Morning – Late Evening</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">💵</div>
+              <div class="contact-item-text">
+                <h4>Price Range</h4>
+                <p>₹200 – ₹400 per person</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">💬</div>
+              <div class="contact-item-text">
+                <h4>WhatsApp</h4>
+                <p>Tap the green button to chat with us instantly!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map reveal-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.0!2d76.8!3d28.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJQWP%2B2V9%2C+Jhajjar+-+Bahadurgarh+Rd%2C+Dulhera%2C+Haryana+124508!5e0!3m2!1sen!2sin!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Unik Cafe Location"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand-text">Unik <span>Cafe</span></div>
+          <p>Your neighbourhood destination for exceptional coffee, fresh cuisine, and moments worth savouring. Located in the heart of Dulhera, Haryana.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Menu</h4>
+          <ul>
+            <li><a href="#menu">Coffee</a></li>
+            <li><a href="#menu">Snacks</a></li>
+            <li><a href="#menu">Main Course</a></li>
+            <li><a href="#menu">Beverages</a></li>
+            <li><a href="#menu">Desserts</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Unik Cafe Dulehra & SK Associates. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://maps.google.com/?q=JQWP+2V9,+Jhajjar+-+Bahadurgarh+Rd,+Dulhera,+Haryana+124508" target="_blank" class="footer-social-link" aria-label="Google Maps">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Widget -->
+  <div class="whatsapp-widget" id="whatsappWidget">
+    <div class="whatsapp-popup" id="whatsappPopup">
+      <div class="whatsapp-popup-header">
+        <div class="whatsapp-popup-avatar">UC</div>
+        <div class="whatsapp-popup-info">
+          <h4>Unik Cafe</h4>
+          <p>Typically replies within minutes</p>
+        </div>
+        <button class="whatsapp-popup-close" id="whatsappClose" aria-label="Close chat">&times;</button>
+      </div>
+      <div class="whatsapp-popup-body">
+        <div class="whatsapp-message">
+          <p>Hey there! 👋<br>Welcome to Unik Cafe Dulehra. How can we help you today? Feel free to ask about our menu, hours, or reservations!</p>
+          <span class="time">Just now</span>
+        </div>
+      </div>
+      <div class="whatsapp-popup-footer">
+        <a href="https://wa.me/919896836499?text=Hi%20Unik%20Cafe!%20I%20would%20like%20to%20know%20more%20about%20your%20menu%20and%20services." target="_blank" class="whatsapp-send-btn">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          Start Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <button class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+      <span class="whatsapp-badge">1</span>
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
